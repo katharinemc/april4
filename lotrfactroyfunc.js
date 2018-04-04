@@ -21,9 +21,13 @@ function createCharacter(charaName, charaNickname, charaRace, charaOrigin, chara
   };
 }
 
-let gandolf = createCharacter('Gandalf the White','gandalf', 'Wizard', 'Middle Earth',10,6);
-let bilbo = createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'the Shire', 2, 1);
+// let gandolf = createCharacter('Gandalf the White','gandalf', 'Wizard', 'Middle Earth',10,6);
+// let bilbo = createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'the Shire', 2, 1);
+
+let characters = [createCharacter('Gandalf the White','gandalf', 'Wizard', 'Middle Earth',10,6),createCharacter('Bilbo Baggins','bilbo', 'hobbit', 'the Shire',2,1), createCharacter('Frodo Baggins','frodo', 'elf', 'the shire',3,2), createCharacter('Aragorn son of Arathorn','aragorn', 'hooman', 'dunnedain',6,8), createCharacter('Legolas','legolas', 'elf', 'woodland realm',8,5)];
 
 
-gandolf.describe();
-gandolf.evaluateFight(bilbo);
+characters.push(createCharacter('Arwen Undomiel', 'arwen', 'half-elf', 'rivendell', 50, 25));
+
+characters.find( function(character) {return character.nickname === 'aragorn'}
+).describe();
